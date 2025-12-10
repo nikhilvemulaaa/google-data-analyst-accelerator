@@ -72,21 +72,22 @@ const Contact = () => {
                   <span className="text-muted-foreground">Karimnagar, Telangana, India</span>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="flex-1">
-                    <a href="mailto:nikhilvemul6@gmail.com">
-                      <Mail className="h-4 w-4 mr-2" />
-                      Send Email
-                    </a>
+                  <Button 
+                    size="lg" 
+                    className="flex-1"
+                    onClick={() => window.location.href = "mailto:nikhilvemul6@gmail.com"}
+                  >
+                    <Mail className="h-4 w-4 mr-2" />
+                    Send Email
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="flex-1">
-                    <a
-                      href="https://linkedin.com/in/vemula-nikhil-7322b5362"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Linkedin className="h-4 w-4 mr-2" />
-                      Connect on LinkedIn
-                    </a>
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="flex-1"
+                    onClick={() => window.open("https://linkedin.com/in/vemula-nikhil-7322b5362", "_blank")}
+                  >
+                    <Linkedin className="h-4 w-4 mr-2" />
+                    Connect on LinkedIn
                   </Button>
                 </div>
               </div>

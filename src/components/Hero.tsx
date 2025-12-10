@@ -2,6 +2,13 @@ import { ArrowDown, BarChart3, Database, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
       {/* Background Pattern */}
@@ -33,11 +40,20 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Button asChild size="lg" className="px-8">
-              <a href="#project">View Case Study</a>
+            <Button 
+              size="lg" 
+              className="px-8"
+              onClick={() => scrollToSection("project")}
+            >
+              View Case Study
             </Button>
-            <Button asChild variant="outline" size="lg" className="px-8">
-              <a href="#contact">Get in Touch</a>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="px-8"
+              onClick={() => scrollToSection("contact")}
+            >
+              Get in Touch
             </Button>
           </div>
 
