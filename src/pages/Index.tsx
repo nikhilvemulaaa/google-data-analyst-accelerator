@@ -1,13 +1,45 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import ProjectShowcase from "@/components/ProjectShowcase";
+import Skills from "@/components/Skills";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      <Helmet>
+        <title>Nikhil Vemula | Data Analyst Portfolio</title>
+        <meta
+          name="description"
+          content="Data Analyst skilled in Python, SQL, Power BI, and machine learning. View my e-commerce user behavior analysis case study with measurable business impact."
+        />
+        <meta
+          name="keywords"
+          content="Data Analyst, Python, SQL, Power BI, Machine Learning, Data Visualization, Business Intelligence"
+        />
+        <meta property="og:title" content="Nikhil Vemula | Data Analyst Portfolio" />
+        <meta
+          property="og:description"
+          content="Transforming complex data into actionable business insights. View my case studies and data analysis projects."
+        />
+        <link rel="canonical" href="https://nikhilvemula.com" />
+      </Helmet>
+
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <ProjectShowcase />
+          <Skills />
+          <Contact />
+        </main>
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
