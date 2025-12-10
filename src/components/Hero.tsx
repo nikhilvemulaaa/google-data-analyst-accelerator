@@ -1,5 +1,4 @@
-import { ArrowDown, BarChart3, Database, TrendingUp, Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowDown, BarChart3, Database, TrendingUp } from "lucide-react";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -38,35 +37,6 @@ const Hero = () => {
             that drive measurable impact.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Button 
-              size="lg" 
-              className="px-8"
-              onClick={() => scrollToSection("project")}
-            >
-              View Case Study
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="px-8"
-              onClick={() => scrollToSection("contact")}
-            >
-              Get in Touch
-            </Button>
-            <Button 
-              variant="secondary" 
-              size="lg" 
-              className="px-8"
-              asChild
-            >
-              <a href="/Nikhil_Uda_Resume.pdf" download="Nikhil_Uda_Resume.pdf">
-                <Download className="h-4 w-4 mr-2" />
-                Download Resume
-              </a>
-            </Button>
-          </div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
