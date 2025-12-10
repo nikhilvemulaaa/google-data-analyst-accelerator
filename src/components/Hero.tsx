@@ -1,4 +1,4 @@
-import { ArrowDown, BarChart3, Database, TrendingUp } from "lucide-react";
+import { ArrowDown, BarChart3, Database, TrendingUp, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -54,6 +54,17 @@ const Hero = () => {
               onClick={() => scrollToSection("contact")}
             >
               Get in Touch
+            </Button>
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="px-8"
+              asChild
+            >
+              <a href="/Nikhil_Uda_Resume.pdf" download="Nikhil_Uda_Resume.pdf">
+                <Download className="h-4 w-4 mr-2" />
+                Download Resume
+              </a>
             </Button>
           </div>
 
